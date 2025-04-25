@@ -3,7 +3,7 @@ resource "aws_alb" "terraform_alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.security_groups_id]
-  subnets            = [var.public_subnet_id]
+  subnets            = var.public_subnet_ids
 
   tags = {
     Name = "${var.project_name}-alb"

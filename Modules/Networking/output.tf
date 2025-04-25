@@ -19,14 +19,14 @@ output "internet_gateway_id" {
   description = "The ID of the internet gateway"  
 }
 output "frontend_security_group_ids" {
-  value = aws_security_group.terraform-frontend-sg.id
+  value = aws_security_group.terraform_frontend_sg.id
   description = "The IDs of the security groups"  
 }
 output "backend_security_group_ids" {
-  value = aws_security_group.terraform-backend-sg.id
+  value = aws_security_group.terraform_backend_sg.id
   description = "The IDs of the security groups"    
 }
 output "database_security_group_ids" {
-  value = aws_security_group.terraform-database-sg.id
+  value = aws_security_group.terraform_database_sg.id
   description = "The IDs of the security groups"    
 }

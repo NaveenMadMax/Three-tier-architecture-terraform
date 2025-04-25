@@ -1,1 +1,14 @@
-#netwoking module variable
+project_name           = "my-3tier-app"
+vpc_cidr               = "10.0.0.0/16"
+public_subnet_cidrs    = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs   = ["10.0.3.0/24", "10.0.4.0/24"]
+availability_zones     = ["us-west-2a", "us-west-2b"]
+enable_nat_gateway     = true
+ami_id                = "ami-075686beab831bb7f" #ubuntu ami id form us-west-2 region
+instance_type         = "t2.micro"
+key_name             = "Laravel-deployment" # replace with your key pair name
+db_username          = "admin"
+db_password          = "admin123456789" # replace with your database password
+db_engine            = "mysql"
+db_engine_version    = "8.0.40"
+db_instance_class = "db.t3.micro"

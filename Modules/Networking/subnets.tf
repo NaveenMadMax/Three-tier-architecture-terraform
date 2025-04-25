@@ -1,3 +1,6 @@
+data "aws_availability_zones" "available" {
+  state = "available"
+}
 resource "aws_subnet" "terraform_public" {
   count = length(var.public_subnet_cidrs)
   vpc_id = aws_vpc.terraform.id

@@ -10,13 +10,13 @@ variable "instance_type" {
   description = "The type of instance to create"
   type        = string   
 }
-variable "public_subnet_id" {
+variable "public_subnet_ids" {
   description = "The ID of the public subnet to launch the instance in"
-  type        = string 
+  type        = list(string) 
 }
-variable "private_subnet_id" {
+variable "private_subnet_ids" {
   description = "The ID of the private subnet to launch the instance in"
-  type        = string   
+  type        = list(string)   
 }
 variable "vpc_id" {
   description = "The ID of the VPC to launch the instance in"
@@ -26,4 +26,8 @@ variable "security_groups_id" {
     type = string
     description = "values of security groups"
   
+}
+variable "key_name" {
+  description = "SSH key pair name to access EC2 instances"
+  type        = string
 }
