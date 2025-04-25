@@ -4,6 +4,6 @@ resource "aws_vpc" "terraform" {
     enable_dns_hostnames = true
 
     tags = {
-      Name: "${var.three-tier-architecture}-vpc"
+      Name: "${var.project_name}-vpc"
     }
 }

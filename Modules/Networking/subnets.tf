@@ -5,7 +5,7 @@ resource "aws_subnet" "terraform_public" {
   availability_zone = element(data.aws_availability_zones.available.names, count.index)
 
   tags = {
-    Name: "${var.three-tier-architecture}-public-subnet-${count.index}"
+    Name: "${var.project_name}-public-subnet-${count.index}"
   }
 }
 resource "aws_subnet" "terraform_private" {
@@ -15,7 +15,7 @@ resource "aws_subnet" "terraform_private" {
   availability_zone = element(data.aws_availability_zones.available.names, count.index)
 
   tags = {
-    Name: "${var.three-tier-architecture}-private-subnet-${count.index}"
+    Name: "${var.project_name}-private-subnet-${count.index}"
   }
   
 }

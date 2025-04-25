@@ -1,4 +1,4 @@
-variable "three-tier-architecture" {
+variable "project_name" {
   description = "Three-tier architecture flag"
   type        = string
 }
@@ -23,3 +23,4 @@ variable "enable_nat_gateway" {
   default     = true
   description = "Enable NAT gateway for private subnets"
 }
+
